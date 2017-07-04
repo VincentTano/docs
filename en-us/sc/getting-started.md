@@ -29,13 +29,13 @@ The installation process is very simple, follow the prompts step by step operati
 
 installation method:
 
-Open Visual Studio 2017, open the tool, expand and update, click on the left side of the search, search AntShares, install the AntShares.SmartContract plugin (the process needs to be networked)
+Open Visual Studio 2017, open Tools, click on Extensions and Updates, click on the Online tab on the left side of the window, search AntShares in the search box on the top right corner of the window, download the AntShares.SmartContract plugin (this step requires internet access)
 
 ![image](http://docs.antshares.org/images/2017-06-02_18-28-37.jpg)
 
 ### 3. AntShares.Compiler.MSIL
 
-Installation and configuration methods:
+Installation and configuration steps:
 
 Download the [AntShares.VM](https://github.com/AntShares/AntShares.VM) project on Github, open the solution with Visual Studio 2017, publish the AntShares.Compiler.MSIL project,
 
@@ -43,7 +43,7 @@ Download the [AntShares.VM](https://github.com/AntShares/AntShares.VM) project o
 
 ![image](http://docs.antshares.org/images/2017-06-02_18-37-44.jpg)
 
-After the release is successful, the AntShares.Compiler.MSIL.exe file is generated in `bin\Release\PublishOutput`
+After the release is successful, the AntShares.Compiler.MSIL.exe file is generated in `src\AntShares.Compiler.MSIL\bin\Release\PublishOutput`
 
 We now need to add this directory to our execution path:
 
