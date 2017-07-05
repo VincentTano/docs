@@ -33,10 +33,12 @@ namespace AntShares.SmartContract
 
 After compiling, generate the contract's `Test1.avm` file. We can create unit test items and test `Test1.avm`.
 
-First create a C# console project with Visual Studio. Then add a reference to `AntShares.dll` and `AntShares.VM.dll`.
+First create a C# Console App (.Net Framework) project with Visual Studio, with .NET Framework 4.6.2. Then add a reference to `AntShares.dll` and `AntShares.VM.dll`.
 
 > [!Note]
 > These two files can be obtained by compiling [AntShares](https://github.com/antshares/antshares) and [AntShares.VM](https://github.com/AntShares/AntShares.VM).
+
+> Alternatively, you can just add NuGet packages "AntShares" and "AntShares.VM" to your project. You can do that by right-clicking the contract project on the Solution Explorer, go to Browse, search antshares and install the required packages.
 
 ```c#
 using System;
@@ -66,16 +68,16 @@ namespace ConsoleApplication1
             engine.Execute(); // start execution
 
             var result = engine.EvaluationStack.Peek().GetBigInteger(); // set the return value here
-            Console.WriteLine($"result {result}");
+            Console.WriteLine($"Execution result {result}");
             Console.ReadLine();
         }
     }
 }
 ```
 
-Output: Execution result 14, in line with expectations
+Compile output: Execution result 14, as expected
 
-Note: If you use the above code to pass the way, pay attention to the top of the stack corresponding to the first parameter, for the convenience of the parameters can also pass the code into the following code.
+Note: If you use the above code to pass the parameters, pay attention to the top of the stack corresponding to the first parameter, for convenience you can also pass the parameters with following code.
 
 ```c#
 using (ScriptBuilder sb = new ScriptBuilder())
@@ -85,7 +87,7 @@ using (ScriptBuilder sb = new ScriptBuilder())
     engine.LoadScript(sb.ToArray());
 }
 ```
-If the return value of the smart contract is not of type int, is bool or other type, you need to set `engine.EvaluationStack.Peek (). GetBigInteger ()` to other values, as shown in Figure
+If the return value of the smart contract is not of type int, but is bool or other type, you need to set `engine.EvaluationStack.Peek (). GetBigInteger ()` to other values, as shown in Figure
 
 [](Http://docs.antshares.org/images/2017-05-16_15-39-07.jpg)
 
