@@ -20,7 +20,7 @@
     A smart contract defined as:
     public static bool Main( (byte[]) publicKey, (byte[]) Sig, int value ){}
  
-    Has a Parameter list: 020001
+    Has a Parameter list: 060002
     and Return Type: 01	
   ```
   
