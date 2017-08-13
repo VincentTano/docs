@@ -12,6 +12,7 @@ The following resources are used in this tutorial and can be helful references w
 3. [Woolong NEP5 Smart Contract](assets/examples/Woolong/Woolong/Woolong.cs)
 4. [Developer GUI](https://github.com/CityOfZion/neo-gui-developer)
 5. [Neo API](../api/neo.md)
+6. [NEP5 Token Standard](https://github.com/neo-project/proposals/nep-5.mediawiki)
 
 ## 3 - SC Code
 This document will be using the example code provided in the Woolong example to walk through the tutorial.  The example implements a slightly modified version of the NEP5 token standard.  The reason for the modification will be provided below.  
@@ -63,11 +64,20 @@ To invoke a smart contract on the NEO blockchain, you will need the smart contra
 1. To acquire the contract hash, right click on the contract account populated in the address window as a result of the **Watching the Smart Contract** window.
 2. Select 'View Contract' to open a window containing information about the smart contract.  Copy the value in the 'Script Hash' field.
 3. Click on the 'Advanced' menu option and select 'Invoke Contract'.
-4. Populate the 'Script Hash' field with the value copied in Step 2.
+4. Populate the 'Script Hash' field with the value copied in Step 2.  As an example, you can invoke the Woolong using the script hash in **Section 3**
 5. The Smart Contract information should automatically populate in the remaining 'Invoke Function' fields.
 6. To populate the input parameters, click on the '...' button next the the Parameters field to open the parameter population menu.
 7. Select the parameters on the left field and populate the variable values in the lower right field.
+
+  **For example, invoking the following:**
+  * `6e616d65, 00, 00, 00, 00` when calling the Woolong, will return 'Woolong'.
+  * `73796d626f6c, 00, 00, 00, 00` will return 'WNG'.
+  * `62616c616e63654f66, 5fe459481de7b82f0636542ffe5445072f9357a1261515d6d3173c07c762743b, 00, 00, 00` will return the current balance of Woolong that lllwvlvwll holds on the testnet.
+  
+  
 8. Click 'OK' to close the parameter input window.
 9. Click the 'Invoke' button to invoke the smart contract.
+
+**Note:** The current standard desktop GUI does not support viewing returns.  Using the developer GUI is recommended when executing the events.
  
  
