@@ -51,10 +51,10 @@ The example has been deployed on the testnet and can be accessed at the followin
 ## 5 - Watching the Smart Contract   
  
 1. On the main NEO wallet window, right click on the address area and select (Create Contract Add > Custom)
-2. Select the Account that you want to associate the Contract with from the 'Related Account' dropdown
-3. In the 'Parameter List' field, populate the 'Parameter List' values used in Step 4 of the **Deploy Smart Contract w/ Parameters** sections.
+2. Select the Account that you want to associate the Contract with from the **Related Account** dropdown
+3. In the **Parameter List** field, populate the **Parameter List** values used in Step 4 of the **Deploy Smart Contract w/ Parameters** sections.
 4. Populate the 'Script' field with the value provided in Step 3 of **Deploy Smart Contract w/ Parameters**.
-5. Click 'Confirm' to load the contract into the wallet window.
+5. Click **Confirm** to load the contract into the wallet window.
  
   
  
@@ -63,10 +63,10 @@ The example has been deployed on the testnet and can be accessed at the followin
 To invoke a smart contract on the NEO blockchain, you will need the smart contract script hash. 
 1. To acquire the contract hash, right click on the contract account populated in the address window as a result of the **Watching the Smart Contract** window.
 2. Select 'View Contract' to open a window containing information about the smart contract.  Copy the value in the 'Script Hash' field.
-3. Click on the 'Advanced' menu option and select 'Invoke Contract'.
-4. Populate the 'Script Hash' field with the value copied in Step 2.  As an example, you can invoke the Woolong using the script hash in **Section 3**
+3. Click on the **Advanced** menu option and select **Invoke Contract**.
+4. Populate the **Script Hash** field with the value copied in Step 2.  As an example, you can invoke the Woolong using the script hash in **Section 3**
 5. The Smart Contract information should automatically populate in the remaining 'Invoke Function' fields.
-6. To populate the input parameters, click on the '...' button next the the Parameters field to open the parameter population menu.
+6. To populate the input parameters, click on the **...** button next the the Parameters field to open the parameter population menu.
 7. Select the parameters on the left field and populate the variable values in the lower right field.
 
   **For example, invoking the following:**
@@ -75,8 +75,8 @@ To invoke a smart contract on the NEO blockchain, you will need the smart contra
   * `62616c616e63654f66, 5fe459481de7b82f0636542ffe5445072f9357a1261515d6d3173c07c762743b, 00, 00, 00` will return the current balance of Woolong that lllwvlvwll holds on the testnet.
   
   
-8. Click 'OK' to close the parameter input window.
-9. Click the 'Invoke' button to invoke the smart contract.
+8. Click **OK** to close the parameter input window.
+9. Click the **Invoke** button to invoke the smart contract.
 
 **Note:** The current standard desktop GUI does not support viewing returns.  Using the developer GUI is recommended when executing the events.
  
