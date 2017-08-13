@@ -1,30 +1,49 @@
 # Deploying a Smart Contract with Parameters
 
 ## 1 - Introduction
- What this tutorial will cover
- 
+This tutorial is designed to cover how to deploy and invoke a smart contract on the NEO blockchain using the desktop GUI.  The tutorial is generic and is appropriate for all contract types including NEP5 tokens.  This tutorial assumes that the contract has already been compiled into a .avm file.  If it has not, please reference the other tutorials first.  A compiled version of the contract and the source used in this tutorial are provided.  
+
 ## 2 - Useful Resources
 
-* [Lock2](https://github.com/CityOfZion/docs/blob/develop/en-us/sc/tutorial/Lock2.md)
-* [Parameter](https://github.com/CityOfZion/docs/blob/develop/en-us/sc/tutorial/Parameter.md)
-   
+The following resources are used in this tutorial and can be helful references when developing a smart contract:
+
+1. [Lock2](Lock2.md)
+2. [Parameter](Parameter.md)
+3. [Woolong NEP5 Smart Contract](assets/examples/Woolong/Woolong/Woolong.cs)
+4. [Developer GUI](https://github.com/CityOfZion/neo-gui-developer)
+5. [Neo API](../api/neo.md)
+
 ## 3 - SC Code
+This document will be using the example code provided in the Woolong example to walk through the tutorial.  The example implements a slightly modified version of the NEP5 token standard.  The reason for the modification will be provided below.  
+
+The example has been deployed on the testnet and can be accessed at the following script hash: 
+    
+	d5df305300086d695f98c758f945fb7564e7da8f
+	
  
 ## 4 - Deploying a Smart Contract with Parameters
  
 1. To deploy the smart contract (.avm) on the blockchain, click on the **Advanced** menu option on the NEO desktop wallet and select **Deploy Contract**.
+
+<p align="center"><img style="vertical-align: middle" src="assets/img/deploy.png" width="500"></p>
+
 2. Populate all of the fields in the **Information** section of the window that appears.  All fields must be populated to deploy the contract.
 3. Load the .avm file using the **Load** buttton.  The Code field will be populated with the script hash.  Copy the contents of the **Code** field for use in a later step.
-4. Populate the **Metadata** fields referencing the **Parameter** documentation.
-  ```Example:
-    A smart contract defined as:
-    public static bool Main( (byte[]) publicKey, (byte[]) Sig, int value ){}
- 
-    Has a Parameter list: 060002
-    and Return Type: 01	
-  ```
+4. Populate the **Metadata** fields referencing the [Parameter](Parameter.md) documentation.
+
+  **The Woolong example token is defined as:**
+     
+    ```csharp
+	public static object Main(byte[] originator, string Event, byte[] args0, byte[] args1, byte[] args2)
+	```
+	
+    So we use:
+    * **Parameter List:** 0505050505
+    * **Return Type:** 05
   
-5. If the contract requires storage (uses the Storage methods), check the **Need Storage** box.
+    **Note:** The inputs are slightly modified from the NEP5 standard.  This is temporary and is meant to accomodate the current functionality of the desktop GUI.  Once the GUI supports params, this document and the example will be updated.
+5. If the contract requires storage (uses the [Read/Write API](../api/neo.md#readwrite-api)), check the **Need Storage** box.  The NEP5 standard uses storage to maintain accounts so make sure this is checked when deploying a NEP5 token.
+    
 6. Click the **Deploy** button.
 
 
