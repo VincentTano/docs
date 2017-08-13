@@ -31,17 +31,17 @@ The example has been deployed on the testnet and can be accessed at the followin
 3. Load the .avm file using the **Load** buttton.  The Code field will be populated with the script hash.  Copy the contents of the **Code** field for use in a later step.
 4. Populate the **Metadata** fields referencing the [Parameter](Parameter.md) documentation.
 
-  **The Woolong example token is defined as:**
+    **The Woolong example token is defined as:**  
      
-  ```csharp
-  public static object Main(byte[] originator, string Event, byte[] args0, byte[] args1, byte[] args2)
-  ```
+    ```csharp
+    public static object Main(byte[] originator, string Event, byte[] args0, byte[] args1, byte[] args2)  
+    ```  
 	
-  So we use:
-  * **Parameter List:** 0505050505
-  * **Return Type:** 05
+    So we use:  
+    * **Parameter List:** 0505050505  
+    * **Return Type:** 05  
   
-  **Note:** The inputs are slightly modified from the NEP5 standard.  This is temporary and is meant to accomodate the current functionality of the desktop GUI.  Once the GUI supports params, this document and the example will be updated.
+    **Note:** The inputs are slightly modified from the NEP5 standard.  This is temporary and is meant to accomodate the current functionality of the desktop GUI.  Once the GUI supports params, this document and the example will be updated.
 5. If the contract requires storage (uses the [Read/Write API](../api/neo.md#readwrite-api)), check the **Need Storage** box.  The NEP5 standard uses storage to maintain accounts so make sure this is checked when deploying a NEP5 token.
     
 6. Click the **Deploy** button.
